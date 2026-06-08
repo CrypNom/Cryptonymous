@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CRYPTONYMOUS // CORE PROFILE</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:monospace;
+}
+
+body{
+background:radial-gradient(circle at center, #120018, black);
+color:#b026ff;
+overflow-x:hidden;
+}
+
+/* SCAN LINE */
+.scan{
+position:fixed;
+width:100%;
+height:2px;
+background:#b026ff;
+opacity:0.12;
+animation:scan 5s linear infinite;
+}
+
+@keyframes scan{
+0%{top:0;}
+100%{top:100%;}
+}
+
+/* NAV */
+nav{
+position:fixed;
+top:0;
+width:100%;
+padding:15px;
+display:flex;
+justify-content:center;
+gap:30px;
+background:rgba(0,0,0,0.4);
+backdrop-filter:blur(12px);
+z-index:10;
+}
+
+nav a{
+color:#b026ff;
+text-decoration:none;
+transition:0.3s;
+}
+
+nav a:hover{
+text-shadow:0 0 10px #b026ff;
+}
+
+/* SECTIONS */
+section{
+min-height:100vh;
+padding:100px 20px;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+
+/* GLOW TEXT */
+.glow{
+text-shadow:0 0 10px #b026ff,0 0 25px #6a00ff;
+}
+
+/* CARD UI */
+.card{
+border:1px solid #6a00ff;
+padding:30px;
+border-radius:15px;
+background:rgba(255,255,255,0.03);
+backdrop-filter:blur(12px);
+box-shadow:0 0 35px #6a00ff33;
+max-width:800px;
+}
+
+/* TERMINAL */
+.terminal{
+background:black;
+border:1px solid #6a00ff;
+padding:20px;
+width:90%;
+max-width:700px;
+height:300px;
+overflow:auto;
+text-align:left;
+box-shadow:0 0 20px #6a00ff44;
+}
+
+.cursor{
+display:inline-block;
+width:10px;
+background:#b026ff;
+animation:blink 0.7s infinite;
+}
+
+@keyframes blink{
+50%{opacity:0;}
+}
+
+/* BIG TITLE */
+h1{
+font-size:55px;
+letter-spacing:3px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="scan"></div>
+
+<!-- NAV -->
+<nav>
+<a href="#home">HOME</a>
+<a href="#about">ABOUT</a>
+<a href="#skills">SKILLS</a>
+<a href="#terminal">TERMINAL</a>
+<a href="#access">ACCESS</a>
+</nav>
+
+<!-- HOME -->
+<section id="home">
+<h1 class="glow">CRYPTONYMOUS</h1>
+<p>// DIGITAL SHADOW ENTITY</p>
+<br>
+<div class="card">
+<p>"We exist where names don’t."</p>
+<p>// STATUS: ACTIVE</p>
+<p>// TRACE: UNTRACKABLE</p>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+<h2 class="glow">ABOUT</h2>
+<div class="card">
+<p>CRYPTONYMOUS is not a person.</p>
+<p>It is a signal inside the system.</p>
+<p>Born from encrypted silence and digital abstraction.</p>
+<br>
+<p>// NO ORIGIN // NO IDENTITY // NO LIMITS</p>
+</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+<h2 class="glow">CAPABILITIES</h2>
+<div class="card">
+<p>[██████████] Cyber Aesthetics</p>
+<p>[██████████] Anonymous Identity Layer</p>
+<p>[████████░░] Frontend Illusions</p>
+<p>[██████░░░░] Network Awareness</p>
+<p>[██████████] Shadow Presence</p>
+</div>
+</section>
+
+<!-- TERMINAL -->
+<section id="terminal">
+<h2 class="glow">SYSTEM TERMINAL</h2>
+<div class="terminal" id="term">
+> boot sequence initiated...<br>
+> identity fragment loading...<br>
+> system stable<br><br>
+</div>
+</section>
+
+<!-- ACCESS -->
+<section id="access">
+<h2 class="glow">FINAL NODE</h2>
+<div class="card">
+<p>// ACCESS COMPLETE</p>
+<p>// OBSERVATION MODE ACTIVE</p>
+<br>
+<p class="glow">“Silence is data. Data is truth.”</p>
+</div>
+</section>
+
+<script>
+// SIMPLE TERMINAL LOOP
+const term = document.getElementById("term");
+
+setInterval(()=>{
+term.innerHTML += "> system heartbeat stable...<br>";
+term.scrollTop = term.scrollHeight;
+},4000);
+</script>
+
+</body>
+</html>
